@@ -24,7 +24,7 @@ function SpeakingPart2() {
         
       </ol>
     </section>
-    ss
+    
   </div>
   );
 }
