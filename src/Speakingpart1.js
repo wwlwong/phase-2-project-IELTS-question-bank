@@ -14,7 +14,10 @@ function SpeakingPart1() {
   
   
   return <div>
-    <h1>Speaking Part 1 Questions</h1>
+    <section>
+      <h1>Speaking Part 1 Questions</h1>
+    </section>
+    
   </div>;
 }
 
