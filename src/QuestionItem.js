@@ -7,11 +7,11 @@ function QuestionItem( {question}) {
         <div>
             <h3>Topic: {topic} </h3>
             <ol>
-            {questions.map((question, index) => {
-                <li>{question}</li>
-            })}
+            {questions.map((subquestion) => (
+                <li>{subquestion}</li>
+            ))}
             </ol>
-            <h5>Views: {views}</h5>
+            {/*<h5>Views: {views}</h5>*/}
         </div>
         
 
