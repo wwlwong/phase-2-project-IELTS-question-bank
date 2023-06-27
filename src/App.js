@@ -6,6 +6,7 @@ import Home from "./Home";
 import Speakingpart1 from "./Speakingpart1";
 import Speakingpart2 from "./Speakingpart2";
 import Speakingpart3 from "./Speakingpart3";
+import QuestionForm from './QuestionForm';
 import NavBar from './NavBar';
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route exact path="/Speakingpart3">
             <Speakingpart3 />
+          </Route>
+          <Route exact path="/QuestionForm">
+            <QuestionForm />
           </Route>
           <Route exact path="/">
             <Home />
