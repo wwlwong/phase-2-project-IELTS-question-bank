@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import QuestionItem from "./QuestionItem";
 
 function SpeakingPart3({questions, setQuestions}) {
