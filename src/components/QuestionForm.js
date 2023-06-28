@@ -14,6 +14,18 @@ function QuestionForm({questions, setQuestions}) {
         views: 0,
       });
 
+    const initialFormData = {
+      part: "",
+      topic: "",
+      question1: "",
+      question2: "",
+      question3: "",
+      question4: "",
+      question5: "",
+      question6: "",
+      views: 0,
+    }
+
     function handleChange(event) {
     setFormData({
         ...formData,
@@ -38,6 +50,7 @@ function QuestionForm({questions, setQuestions}) {
         })
         .then((r) => r.json())
         .then((newQuestion) => setQuestions([...questions, newQuestion]));
+        setFormData(initialFormData);  
       }
 
 
