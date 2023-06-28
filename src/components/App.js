@@ -1,8 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+import '../App.css';
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import Home from "./Home";
+import Home from "../Home";
 import Speakingpart1 from "./Speakingpart1";
 import Speakingpart2 from "./Speakingpart2";
 import Speakingpart3 from "./Speakingpart3";
