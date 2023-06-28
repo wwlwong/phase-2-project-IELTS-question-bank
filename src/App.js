@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Speakingpart1 from "./Speakingpart1";
@@ -10,7 +10,7 @@ import QuestionForm from './QuestionForm';
 import NavBar from './NavBar';
 
 function App() {
-  
+  const [questions, setQuestions] = useState([])
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -32,16 +32,16 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/Speakingpart1">
-            <Speakingpart1 />
+            <Speakingpart1 questions={questions} setQuestions={setQuestions}/>
           </Route>
           <Route exact path="/Speakingpart2">
-            <Speakingpart2 />
+            <Speakingpart2 questions={questions} setQuestions={setQuestions}/>
           </Route>
           <Route exact path="/Speakingpart3">
-            <Speakingpart3 />
+            <Speakingpart3 questions={questions} setQuestions={setQuestions}/>
           </Route>
           <Route exact path="/QuestionForm">
-            <QuestionForm />
+            <QuestionForm questions={questions} setQuestions={setQuestions}/>
           </Route>
           <Route exact path="/">
             <Home />
