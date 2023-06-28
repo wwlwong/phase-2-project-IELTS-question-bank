@@ -24,7 +24,7 @@ function QuestionForm({questions, setQuestions}) {
     function handleSubmit(event) {
         event.preventDefault();
         
-        fetch(`http://flatiron-phase-2-project.onrender.com/${formData.part}`, {
+        fetch(`https://flatiron-phase-2-project.onrender.com/${formData.part}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -42,16 +42,17 @@ function QuestionForm({questions, setQuestions}) {
 
 
     return (
-    <div>
+    <section>
       <h1>Create new question</h1>
       <form onSubmit={handleSubmit}>
-        <h4>Select Part</h4>
-        <select name="selectList" value={formData.part} onChange={handleChange}>
-            <option value="speaking_part1">Speaking Part 1</option>
-            <option value="speaking_part2">Speaking Part 2</option>
-            <option value="speaking_part3">Speaking Part 3</option>
+        <label>
+            Speaking Part Number
+            <select name="part" value={formData.part} onChange={handleChange}>
+                <option value="speaking_part1">Speaking Part 1</option>
+                <option value="speaking_part2">Speaking Part 2</option>
+                <option value="speaking_part3">Speaking Part 3</option>
             </select>
-        
+        </label>
         <label>
             Topic:
             <input
@@ -120,7 +121,7 @@ function QuestionForm({questions, setQuestions}) {
             Submit
         </button>
      </form>
-    </div>
+    </section>
     );
   }
   
