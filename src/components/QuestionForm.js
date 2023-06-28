@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 
 function QuestionForm({questions, setQuestions}) {
@@ -27,6 +27,21 @@ function QuestionForm({questions, setQuestions}) {
       views: 0,
     }
 
+    const modalDisplayTime = 3000;
+
+    const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+      let timeout;
+      if (showModal) {
+        timeout = setTimeout(() => {
+          setShowModal(false);
+        }, modalDisplayTime);
+      }
+      return () => clearTimeout(timeout);
+    }, [showModal]);
+  
+
     function handleChange(event) {
     setFormData({
         ...formData,
@@ -51,6 +66,7 @@ function QuestionForm({questions, setQuestions}) {
         })
         .then((r) => r.json())
         .then((newQuestion) => setQuestions([...questions, newQuestion]));
+        setShowModal(true);
         setFormData(initialFormData);  
       }
 
@@ -135,7 +151,10 @@ function QuestionForm({questions, setQuestions}) {
             Submit
         </button>
      </form>
+     {showModal && <div><h3>Questions Submitted</h3></div>}
     </section>
+    
+      
     );
   }
   
