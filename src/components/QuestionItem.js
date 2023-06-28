@@ -1,8 +1,12 @@
 import React from "react";
 
-function QuestionItem( {question}) {
+function QuestionItem( {question , onDeleteTopic}) {
     const {id, topic, questions, views } = question;
     
+    function handleDeleteClick(){
+        onDeleteTopic(id);
+      } 
+
     return (
         <div>
             <h3>Topic: {topic} </h3>
@@ -11,6 +15,9 @@ function QuestionItem( {question}) {
                 <li>{subquestion}</li>
             ))}
             </ol>
+
+            <button onClick={handleDeleteClick}>Delete Topic</button>
+
             {/*<h5>Views: {views}</h5>*/}
         </div>
         
