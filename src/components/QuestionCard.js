@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './QuestionCard.css'
 
 function QuestionCard( {question}) {
     const {id, topic, questions, views } = question;
