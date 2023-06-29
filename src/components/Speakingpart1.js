@@ -1,5 +1,6 @@
 import React, { useEffect} from "react";
 import QuestionItem from "./QuestionItem";
+import QuestionCard from "./QuestionCard";
 
 function SpeakingPart1({questions, setQuestions}) {
   //const [questions, setQuestions] = useState([])
@@ -15,12 +16,14 @@ function SpeakingPart1({questions, setQuestions}) {
   
   
   return ( 
-    <div>
+    <div className="card-grid">
     <section>
       <h1>Speaking Part 1 Questions</h1>
       <ol> 
         {questions.map((question) => (
-        <QuestionItem key={question.id} question={question} /> ))}
+        
+          <QuestionCard key={question.id} question={question} />
+        ))}
         
       </ol>
     </section>
