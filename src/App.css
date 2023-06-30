@@ -60,7 +60,7 @@
   cursor: pointer;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
   height: 150px;
-  width: 500px;
+  width: 700px;
   margin: 10px;
 }
 

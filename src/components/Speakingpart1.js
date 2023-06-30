@@ -13,7 +13,13 @@ function SpeakingPart1({questions, setQuestions}) {
         setQuestions(questions)});
   }, []); 
   
-  
+  function onDeleteTopic(id){
+    fetch(`https://flatiron-phase-2-project.onrender.com/speaking_part1/${id}`, {
+      method: "DELETE",
+    })
+    .then((r) => r.json())
+    .then(() => setQuestions(questions.filter((question) => question.id !== id)));
+  }
   
   return ( 
     <div className="card-grid">
@@ -22,7 +28,7 @@ function SpeakingPart1({questions, setQuestions}) {
       <ol> 
         {questions.map((question) => (
         
-          <QuestionCard key={question.id} question={question} />
+          <QuestionCard key={question.id} question={question}  onDeleteTopic={onDeleteTopic}/>
         ))}
         
       </ol>
