@@ -20,6 +20,7 @@ function QuestionCard( {question}) {
                     ))}
                 </ol>
             </div>
+            
         </div>
 
     );
