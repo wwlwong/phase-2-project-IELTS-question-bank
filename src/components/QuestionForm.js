@@ -77,7 +77,7 @@ function QuestionForm({questions1, setQuestions1, questions2, setQuestions2, que
           }
           });
         setShowModal(true);
-        //setFormData(initialFormData);  
+        setFormData(initialFormData);  
       }
 
 
@@ -88,6 +88,7 @@ function QuestionForm({questions1, setQuestions1, questions2, setQuestions2, que
         <label>
             Speaking Part Number
             <select name="part" value={formData.part} onChange={handleChange}>
+                <option value="" selected disabled="true">Select part number</option>
                 <option value="speaking_part1">Speaking Part 1</option>
                 <option value="speaking_part2">Speaking Part 2</option>
                 <option value="speaking_part3">Speaking Part 3</option>
