@@ -11,7 +11,7 @@ function SpeakingPart1({questions, setQuestions}) {
       .then((questions) => {
         
         setQuestions(questions)});
-  }, [questions]); 
+  }, []); 
   
   function onDeleteTopic(id){
     fetch(`https://flatiron-phase-2-project.onrender.com/speaking_part1/${id}`, {
@@ -22,7 +22,7 @@ function SpeakingPart1({questions, setQuestions}) {
   }
   
   return ( 
-    <div className="card-grid">
+    <div>
     <section>
       <h1>Speaking Part 1 Questions</h1>
       <ol> 

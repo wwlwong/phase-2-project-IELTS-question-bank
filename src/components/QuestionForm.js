@@ -77,7 +77,7 @@ function QuestionForm({questions1, setQuestions1, questions2, setQuestions2, que
           }
           });
         setShowModal(true);
-        setFormData(initialFormData);  
+        //setFormData(initialFormData);  
       }
 
 
