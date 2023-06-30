@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 
-function QuestionForm({questions, setQuestions}) {
+function QuestionForm({questions1, setQuestions1, questions2, setQuestions2, questions3, setQuestions3}) {
 
     const [formData, setFormData] = useState({
         part: "",
@@ -65,7 +65,17 @@ function QuestionForm({questions, setQuestions}) {
           } )
         })
         .then((r) => r.json())
-        .then((newQuestion) => setQuestions([...questions, newQuestion]));
+        .then((newQuestion) => {
+          if (formData.part === "speaking_part1"){
+            setQuestions1([...questions1, newQuestion]);
+          }
+          else if (formData.part === "speaking_part2"){
+            setQuestions2([...questions2, newQuestion]);
+          } 
+          else {
+            setQuestions3([...questions3, newQuestion]);
+          }
+          });
         setShowModal(true);
         setFormData(initialFormData);  
       }
@@ -73,7 +83,7 @@ function QuestionForm({questions, setQuestions}) {
 
     return (
     <section>
-      <h1>Create new question</h1>
+      <h1>Create new quessstion</h1>
       <form onSubmit={handleSubmit}>
         <label>
             Speaking Part Number

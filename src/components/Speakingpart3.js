@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import QuestionItem from "./QuestionItem";
+import QuestionCard from "./QuestionCard";
 
 function SpeakingPart3({questions, setQuestions}) {
   
@@ -27,7 +28,7 @@ function SpeakingPart3({questions, setQuestions}) {
       <h1>Speaking Part 3 Questions</h1>
       <ol> 
         {questions.map((question) => (
-        <QuestionItem key={question.id} question={question} onDeleteTopic={onDeleteTopic} /> ))}
+        <QuestionCard key={question.id} question={question} onDeleteTopic={onDeleteTopic} /> ))}
         
       </ol>
     </section>
