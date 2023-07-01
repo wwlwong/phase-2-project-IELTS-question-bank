@@ -27,7 +27,12 @@ function QuestionCard( {question, onDeleteTopic}) {
                 </div>
                 
             </div>
-            <button onClick={handleDeleteClick}>Delete Topic</button>
+            <span>
+                <p>Views: {views}</p>
+                <button onClick={handleDeleteClick}>Delete Topic</button>
+            </span>
+            
+            
         </div>
     );
 }
