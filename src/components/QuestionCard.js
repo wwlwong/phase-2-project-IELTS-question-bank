@@ -32,10 +32,10 @@ function QuestionCard( {question, onDeleteTopic, onUpdateViews}) {
                 </div>
                 
             </div>
-            <span>
-                <p>Views: {views}</p>
-                <button onClick={handleDeleteClick}>Delete Topic</button>
-            </span>
+            <div className="bottomblock">
+                <p className="flex-item">Views: {views}   </p>
+                <button className="flex-item" onClick={handleDeleteClick}>Delete Topic</button>
+            </div>
             
             
         </div>
