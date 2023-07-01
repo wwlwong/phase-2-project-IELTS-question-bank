@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 
-function QuestionCard( {question, onDeleteTopic}) {
+function QuestionCard( {question, onDeleteTopic, onUpdateViews}) {
     const {id, topic, questions, views } = question;
 
     const [flip, setFlip] = useState(false);
 
     function handleDeleteClick(){
         onDeleteTopic(id);
-      } 
+      }
+      
+    function handleViewClick(){
+        onUpdateViews(id, views+1) 
+    }
 
 
     return (
         <div>
             <div className={`card ${flip ? "flip" : ""}`}>
 
-                <div className="topic" onClick={() => setFlip(!flip)}>
+                <div className="topic" onClick={() => {setFlip(!flip)
+                                                        handleViewClick()}}>
                     {topic}
                 </div>
 

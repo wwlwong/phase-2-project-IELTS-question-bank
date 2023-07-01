@@ -22,13 +22,40 @@ function SpeakingPart3({questions, setQuestions}) {
     .then(() => setQuestions(questions.filter((question) => question.id !== id)));
   }
   
+  function onUpdateViews(id, viewCount){
+    fetch(`https://flatiron-phase-2-project.onrender.com/speaking_part3/${id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(
+          {
+            "views": parseInt(viewCount),
+          } )
+        })
+        .then((r) => r.json())
+        .then((updatedQuestion) => handleUpdateQuestion(updatedQuestion));
+  }
+
+  function handleUpdateQuestion(updatedQuestion) {
+      const updatedQuestions = questions.map((question) => {
+        if (question.id === updatedQuestion.id) {
+          return updatedQuestion;
+        } else {
+          return question;
+        }
+      });
+      setQuestions(updatedQuestions);
+    }
+
+
   return (
     <div>
     <section>
       <h1>Speaking Part 3 Questions</h1>
       <ol> 
         {questions.map((question) => (
-        <QuestionCard key={question.id} question={question} onDeleteTopic={onDeleteTopic} /> ))}
+        <QuestionCard key={question.id} question={question} onDeleteTopic={onDeleteTopic} onUpdateViews={onUpdateViews}/> ))}
         
       </ol>
     </section>
