@@ -83,74 +83,81 @@ function QuestionForm({questions1, setQuestions1, questions2, setQuestions2, que
 
     return (
     <section>
-      <h1>Create new quessstion</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
+      <h1>Create new question</h1>
+      <form className="question-entry" onSubmit={handleSubmit}>
+        <label className='form-label'>
             Speaking Part Number
-            <select name="part" value={formData.part} onChange={handleChange}>
+            <select className="dropdown" name="part" value={formData.part} onChange={handleChange}>
                 <option value="" selected disabled="true">Select part number</option>
                 <option value="speaking_part1">Speaking Part 1</option>
                 <option value="speaking_part2">Speaking Part 2</option>
                 <option value="speaking_part3">Speaking Part 3</option>
             </select>
         </label>
-        <label>
+        <label className='form-label'>
             Topic:
             <input
+            className="text-box"
             type="text"
             name="topic"
             value={formData.topic}
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label  className='form-label'>
           Question 1:
           <input
+            className="text-box"
             type="text"
             name="question1"
             value={formData.question1}
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label  className='form-label'>
             Question 2:
           <input
+            className="text-box"
             type="text"
             name="question2"
             value={formData.question2}
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label className='form-label'>
             Question 3:
           <input
+            className="text-box"
             type="text"
             name="question3"
             value={formData.question3}
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label className='form-label'>
             Question 4:
           <input
+            className="text-box"
             type="text"
             name="question4"
             value={formData.question4}
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label className='form-label'>
           Question 5:
           <input
+            className="text-box"
             type="text"
             name="question5"
             value={formData.question5}
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label className='form-label'>
           Question 6:
           <input
+            className="text-box"
             type="text"
             name="question6"
             value={formData.question6}

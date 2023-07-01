@@ -97,3 +97,27 @@
   margin: 1em;
 }
 
+.question-entry{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size:large;
+}
+
+.text-box{
+  width: 600px;
+  margin: 1em;
+}
+
+.dropdown{
+  margin: 1em;
+}
+
+.submit-btn{
+  max-width: 200px;
+  height: 30px;
+  margin-left: 9em;
+}
