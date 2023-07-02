@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
-import QuestionItem from "./QuestionItem";
 import QuestionCard from "./QuestionCard";
 
 function SpeakingPart3({questions, setQuestions}) {
   
-  //const [questions, setQuestions] = useState([])
 
   useEffect(() => {
     fetch("https://flatiron-phase-2-project.onrender.com/speaking_part3")
