@@ -121,3 +121,19 @@
   height: 30px;
   margin-left: 9em;
 }
+
+.home-header{
+  margin-left: 10em;
+}
+
+.home-image{
+  margin-left: 10em;
+}
+
+.home-body{
+  color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 200;
+  font-size: large;
+  margin-left: 1.5em;
+}
