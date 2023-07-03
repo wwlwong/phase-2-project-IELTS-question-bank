@@ -25,6 +25,8 @@ function NavBar() {
         activeStyle={{background: "darkblue",}}>Speaking Part 3</NavLink>
     <NavLink to='/QuestionForm' style={linkStyles}
         activeStyle={{background: "darkblue",}}>Create New Question</NavLink>
+     <NavLink to='/QuestionFormDynamic' style={linkStyles}
+        activeStyle={{background: "darkblue",}}>Create New Question Test</NavLink>   
   </div>
   );
 }

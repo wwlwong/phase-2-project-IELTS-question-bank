@@ -8,6 +8,7 @@ import Speakingpart2 from "./Speakingpart2";
 import Speakingpart3 from "./Speakingpart3";
 import QuestionForm from './QuestionForm';
 import NavBar from './NavBar';
+import QuestionFormDynamic from './QuestionFormDynamic';
 
 function App() {
   const [questions1, setQuestions1] = useState([])
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route exact path="/QuestionForm">
             <QuestionForm questions1={questions1} setQuestions1={setQuestions1} questions2={questions2} setQuestions2={setQuestions2} questions3={questions3} setQuestions3={setQuestions3}/>
+          </Route>
+          <Route exact path="/QuestionFormDynamic">
+            <QuestionFormDynamic questions1={questions1} setQuestions1={setQuestions1} questions2={questions2} setQuestions2={setQuestions2} questions3={questions3} setQuestions3={setQuestions3}/>
           </Route>
           <Route exact path="/">
             <Home />
